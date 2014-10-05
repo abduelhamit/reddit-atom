@@ -1,0 +1,14 @@
+{
+  "name": "reddit-atom",
+  "main": "./lib/reddit-atom",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "activationEvents": ["reddit-atom:toggle"],
+  "repository": "https://github.com/atom/reddit-atom",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
