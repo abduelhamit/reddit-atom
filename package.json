@@ -2,9 +2,9 @@
   "name": "reddit-atom",
   "main": "./lib/reddit-atom",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "Read reddit inside Atom.",
   "activationEvents": ["reddit-atom:toggle"],
-  "repository": "https://github.com/atom/reddit-atom",
+  "repository": "https://github.com/abduelhamit/reddit-atom",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
