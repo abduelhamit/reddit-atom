@@ -1,12 +1,19 @@
 RedditAtomView = require './reddit-atom-view'
 
+redditUri = 'reddit://'
+
 module.exports =
-  redditAtomView: null
+  redditAtomOpener: null
 
   activate: ->
+    @redditAtomOpener = atom.workspace.addOpener (uri) ->
+      if uri.startsWith redditUri
+        redditAtomView = new RedditAtomView()
+        redditAtomView.open()
+        redditAtomView
+
     atom.workspaceView.command 'reddit-atom:open', =>
-      @redditAtomView ?= new RedditAtomView()
-      @redditAtomView.open()
+      atom.workspace.open redditUri + '/'
 
   deactivate: ->
-    @redditAtomView.destroy()
+    @redditAtomOpener.dispose()

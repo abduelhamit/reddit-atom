@@ -19,4 +19,6 @@ class RedditAtomView extends View
       @message.text 'Waiting for data…'
       $.getJSON "https://www.reddit.com#{uri}.json", (response) =>
         @message.text 'Got it!'
-      atom.workspaceView.append(this)
+
+  getTitle: ->
+    'Reddit'
