@@ -1,6 +1,6 @@
 {$} = require 'atom'
 TextEditor = require 'atom/../src/text-editor'
-TextBuffer = require 'atom/../node_modules/text-buffer/lib/text-buffer'
+TextBuffer = require 'text-buffer'
 
 module.exports =
 class RedditAtomView extends TextEditor
