@@ -1,7 +1,7 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
 'context-menu':
   '.overlayer':
-      'Enable reddit-atom': 'reddit-atom:toggle'
+      'Open reddit-atom': 'reddit-atom:open'
 
 'menu': [
   {
@@ -9,7 +9,7 @@
     'submenu': [
       'label': 'reddit-atom'
       'submenu': [
-        { 'label': 'Toggle', 'command': 'reddit-atom:toggle' }
+        { 'label': 'open', 'command': 'reddit-atom:open' }
       ]
     ]
   }

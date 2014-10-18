@@ -7,7 +7,7 @@ class RedditAtomView extends View
       @div "The RedditAtom package is Alive! It's ALIVE!", class: "message"
 
   initialize: (serializeState) ->
-    atom.workspaceView.command "reddit-atom:toggle", => @toggle()
+    atom.workspaceView.command "reddit-atom:open", => @open()
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
@@ -16,8 +16,8 @@ class RedditAtomView extends View
   destroy: ->
     @detach()
 
-  toggle: ->
-    console.log "RedditAtomView was toggled!"
+  open: ->
+    console.log "RedditAtomView was opened!"
     if @hasParent()
       @detach()
     else

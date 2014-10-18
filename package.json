@@ -3,7 +3,7 @@
   "main": "./lib/reddit-atom",
   "version": "0.0.0",
   "description": "Read reddit inside Atom.",
-  "activationEvents": ["reddit-atom:toggle"],
+  "activationEvents": ["reddit-atom:open"],
   "repository": "https://github.com/abduelhamit/reddit-atom",
   "license": "MIT",
   "engines": {
