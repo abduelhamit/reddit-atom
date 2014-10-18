@@ -4,10 +4,10 @@ module.exports =
 class RedditAtomView extends View
   @content: ->
     @div class: 'reddit-atom overlay from-top', =>
-      @div "The RedditAtom package is Alive! It's ALIVE!", class: "message"
+      @div 'The RedditAtom package is Alive! It\'s ALIVE!', class: 'message'
 
   initialize: (serializeState) ->
-    atom.workspaceView.command "reddit-atom:open", => @open()
+    atom.workspaceView.command 'reddit-atom:open', => @open()
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
@@ -17,7 +17,7 @@ class RedditAtomView extends View
     @detach()
 
   open: ->
-    console.log "RedditAtomView was opened!"
+    console.log 'RedditAtomView was opened!'
     if @hasParent()
       @detach()
     else
