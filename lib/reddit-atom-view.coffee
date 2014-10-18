@@ -1,10 +1,11 @@
-{View} = require 'atom'
+{$, View} = require 'atom'
 
 module.exports =
 class RedditAtomView extends View
   @content: ->
     @div class: 'reddit-atom overlay from-top', =>
-      @div 'The RedditAtom package is Alive! It\'s ALIVE!', class: 'message'
+      @div class: 'message', =>
+        @span 'Waiting for data…', outlet: 'message'
 
   initialize: (serializeState) ->
     atom.workspaceView.command 'reddit-atom:open', => @open()
@@ -21,4 +22,7 @@ class RedditAtomView extends View
     if @hasParent()
       @detach()
     else
+      @message.text 'Waiting for data…'
+      $.getJSON 'https://www.reddit.com/.json', (response) =>
+        @message.text 'Got it!'
       atom.workspaceView.append(this)
