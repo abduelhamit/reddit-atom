@@ -13,4 +13,8 @@ class RedditAtomView extends TextEditor
   open: (uri) ->
     uri = '/' if !uri? or uri == ''
     $.getJSON "https://www.reddit.com#{uri}.json", (response) =>
-      @insertText 'Got it!'
+      for link in response.data.children
+        @insertText link.data.title + '\n',
+          autoIndent: true
+          autoIndentNewline: true
+          autoDecreaseIndent: true
