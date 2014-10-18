@@ -1,8 +1,4 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
-'context-menu':
-  '.overlayer':
-      'Open reddit-atom': 'reddit-atom:open'
-
 'menu': [
   {
     'label': 'Packages'
