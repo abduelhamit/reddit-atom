@@ -7,8 +7,9 @@
   "repository": "https://github.com/abduelhamit/reddit-atom",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=0.132.0"
   },
   "dependencies": {
+    "text-buffer": ">=3.2.6"
   }
 }
