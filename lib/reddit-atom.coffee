@@ -8,9 +8,7 @@ module.exports =
   activate: ->
     @redditAtomOpener = atom.workspace.addOpener (uri) ->
       if uri.startsWith redditUri
-        redditAtomView = new RedditAtomView()
-        redditAtomView.open()
-        redditAtomView
+        new RedditAtomView()
 
     atom.workspaceView.command 'reddit-atom:open', =>
       atom.workspace.open redditUri + '/'

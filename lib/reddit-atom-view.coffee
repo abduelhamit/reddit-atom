@@ -7,6 +7,10 @@ class RedditAtomView extends View
       @div class: 'message', =>
         @span 'Waiting for data…', outlet: 'message'
 
+  initialize: ->
+    @open()
+    @
+
   # Tear down any state and detach
   destroy: ->
     @detach()
