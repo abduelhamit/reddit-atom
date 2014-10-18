@@ -10,7 +10,7 @@ module.exports =
       if uri.startsWith redditUri
         new RedditAtomView uri.substr redditUri.length
 
-    atom.workspaceView.command 'reddit-atom:open', =>
+    atom.workspaceView.command 'reddit-atom:open', ->
       atom.workspace.open redditUri + '/'
 
   deactivate: ->
