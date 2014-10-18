@@ -14,11 +14,12 @@ class RedditAtomView extends View
   destroy: ->
     @detach()
 
-  open: ->
+  open: (uri) ->
+    uri = '/' if !uri? or uri == ''
     if @hasParent()
       @detach()
     else
       @message.text 'Waiting for data…'
-      $.getJSON 'https://www.reddit.com/.json', (response) =>
+      $.getJSON "https://www.reddit.com#{uri}.json", (response) =>
         @message.text 'Got it!'
       atom.workspaceView.append(this)
