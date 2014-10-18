@@ -15,7 +15,6 @@ class RedditAtomView extends View
     @detach()
 
   open: ->
-    console.log 'RedditAtomView was opened!'
     if @hasParent()
       @detach()
     else
