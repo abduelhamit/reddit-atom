@@ -7,9 +7,6 @@ class RedditAtomView extends View
       @div class: 'message', =>
         @span 'Waiting for data…', outlet: 'message'
 
-  initialize: (serializeState) ->
-    atom.workspaceView.command 'reddit-atom:open', => @open()
-
   # Returns an object that can be retrieved when package is activated
   serialize: ->
 

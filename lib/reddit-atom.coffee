@@ -4,7 +4,9 @@ module.exports =
   redditAtomView: null
 
   activate: (state) ->
-    @redditAtomView = new RedditAtomView(state.redditAtomViewState)
+    atom.workspaceView.command 'reddit-atom:open', =>
+      @redditAtomView ?= new RedditAtomView(state.redditAtomViewState)
+      @redditAtomView.open()
 
   deactivate: ->
     @redditAtomView.destroy()
