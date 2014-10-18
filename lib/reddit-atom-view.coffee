@@ -14,6 +14,3 @@ class RedditAtomView extends TextEditor
     uri = '/' if !uri? or uri == ''
     $.getJSON "https://www.reddit.com#{uri}.json", (response) =>
       @insertText 'Got it!'
-
-  getTitle: ->
-    'Reddit'
